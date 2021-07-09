@@ -1,4 +1,5 @@
 package com.mballem.curso.boot.dao;
+
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;

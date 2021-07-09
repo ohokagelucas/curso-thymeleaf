@@ -25,7 +25,7 @@ public class Endereco extends AbstractEntity<Long> {
 	
 	@Column(nullable = false, length = 5)
 	private Integer numero;
-		
+	
 	private String complemento;
 
 	public String getLogradouro() {
@@ -83,5 +83,4 @@ public class Endereco extends AbstractEntity<Long> {
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
-	
 }

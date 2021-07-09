@@ -7,8 +7,8 @@ import javax.persistence.*;
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "DEPARTAMENTOS")
-public class Departamento extends AbstractEntity<Long>{
-	
+public class Departamento extends AbstractEntity<Long> {
+
 	@Column(name = "nome", nullable = false, unique = true, length = 60)
 	private String nome;
 	
@@ -30,7 +30,4 @@ public class Departamento extends AbstractEntity<Long>{
 	public void setCargos(List<Cargo> cargos) {
 		this.cargos = cargos;
 	}
-	
-	
-
 }

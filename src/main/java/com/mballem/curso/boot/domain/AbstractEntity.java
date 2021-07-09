@@ -1,11 +1,9 @@
 package com.mballem.curso.boot.domain;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 import javax.persistence.*;
 
-		
 @SuppressWarnings("serial")
 @MappedSuperclass
 public abstract class AbstractEntity<ID extends Serializable> implements Serializable {
@@ -38,12 +36,16 @@ public abstract class AbstractEntity<ID extends Serializable> implements Seriali
 		if (getClass() != obj.getClass())
 			return false;
 		AbstractEntity<?> other = (AbstractEntity<?>) obj;
-		return Objects.equals(id, other.id);
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
 	}
 
 	@Override
 	public String toString() {
 		return "id = " + id;
-	}
-	
+	}	
 }
