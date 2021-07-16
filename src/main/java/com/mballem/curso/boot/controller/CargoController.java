@@ -12,9 +12,9 @@ public class CargoController {
 	public String cadastrar() {
 		return "/cargo/cadastro";
 	}
-	
+
 	@GetMapping ("/listar")
 	public String listar() {
 		return "/cargo/lista";
-}
+	}
 }

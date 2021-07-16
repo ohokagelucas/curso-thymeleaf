@@ -12,9 +12,9 @@ public class FuncionarioController {
 	public String cadastrar() {
 		return "/funcionario/cadastro";
 	}
-	
+
 	@GetMapping ("/listar")
 	public String listar() {
 		return "/funcionario/lista";
-}
+	}
 }
