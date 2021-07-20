@@ -30,7 +30,7 @@ public class Funcionario extends AbstractEntity<Long> {
 	private LocalDate dataEntrada;
 	
 	@DateTimeFormat(iso = ISO.DATE)
-	@Column(name = "data_saida", columnDefinition = "DATE")
+	@Column(name = "data_saida", nullable = false, columnDefinition = "DATE")
 	private LocalDate dataSaida;
 	
 	@OneToOne(cascade = CascadeType.ALL)

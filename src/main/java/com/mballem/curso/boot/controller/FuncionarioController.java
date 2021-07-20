@@ -82,8 +82,8 @@ public class FuncionarioController {
 	
     @GetMapping("/buscar/data")
     public String getPorDatas(@RequestParam(name = "entrada", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate entrada,
-                              @RequestParam("saida") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate saida,
-                              ModelMap model) {
+    						  @RequestParam(name = "saida", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate saida,
+    						  ModelMap model) {
 
         model.addAttribute("funcionarios", funcionarioService.buscarPorDatas(entrada, saida));
         return "/funcionario/lista";
