@@ -49,7 +49,7 @@ public class FuncionarioController {
 	@GetMapping("/listar")
 	public String listar(ModelMap model) {
 		model.addAttribute("funcionarios", funcionarioService.buscarTodos());
-		return "/funcionario/lista"; 
+		return "/funcioNario/lista"; 
 	}
 
 	@PostMapping("/salvar")
